@@ -1,0 +1,58 @@
+# ── Foundry build artifacts ───────────────────────────────────────────────────
+/out
+/cache
+/cache_hardhat
+.gas-snapshot
+/forge-cache
+
+# ── Dependencies (reinstall with `forge install`) ─────────────────────────────
+/lib/openzeppelin-contracts
+/lib/forge-std
+
+# ── Environment & secrets ─────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+keystore/
+
+# ── Broadcast & deployment artifacts ─────────────────────────────────────────
+# Commit only the dry-run folder; ignore live run-latest to avoid leaking data
+/broadcast/**/run-latest.json
+/broadcast/**/dry-run/
+
+# ── Coverage ──────────────────────────────────────────────────────────────────
+lcov.info
+coverage/
+/coverage-report
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Node (scripts / tooling alongside Foundry) ────────────────────────────────
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ── Slither / static analysis ─────────────────────────────────────────────────
+.slither/
+slither.db.json
+
+# ── Hardhat (if ever used in parallel) ────────────────────────────────────────
+artifacts/
+typechain/
+typechain-types/
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
